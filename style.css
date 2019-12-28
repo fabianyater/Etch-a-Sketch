@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Sofia';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Sofia'), local('Sofia-Regular'), url(https://fonts.gstatic.com/s/sofia/v8/8QIHdirahM3j_su5uI0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html {
+    background-image: url("fondo.png");
+    background-size: cover;
+    font-weight: bold;
+    font-family: Sofia;
+}
+
+body {
+    width: 600px;
+    margin: auto;
+    border: 2px black solid;
+    border-radius: 60px 60px 0 0;
+    background: #ac0102;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 3.5pc;
+    color: #f7e025;
+}
+
+#opbtnup {
+    margin: auto;
+    padding: 5px 0 10px 0;
+    /*! border: 1px black solid; */
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+#btns {
+    margin: auto;
+    padding: 5px 0 0 0;
+    /*! border: 1px black solid; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.opbtn {
+    width: 90px;
+    box-shadow: -3px 3px #c6b497;
+    border: 2px #c6b497 solid;
+    border-radius: 100%;
+    /*! padding: 5px 15px 5px 15px; */
+    height: 90px;
+    margin-left: 40px;
+    margin: auto;
+    font-size: 2em;
+}
+
+.opbtnup {
+    width: 80px;
+    box-shadow: -3px 3px #c6b497;
+    border: 2px #c6b497 solid;
+    border-radius: 10px;
+    /*! padding: 5px 15px 5px 15px; */
+    height: 30px;
+    margin: auto;
+}
+
+.opbtn:hover {
+    cursor: pointer;
+    background: #ac0102;
+    color: white;
+}
+
+.opbtn:active {
+    transform: scale(1.2);
+}
+
+.opbtnup:hover {
+    cursor: pointer;
+    background: #ac0102;
+    color: white;
+}
+
+.opbtnup:active {
+    transform: scale(1.2);
+}
+
+
+.opbtnup:focus {
+    background-color:#ac0102;
+    color:white;
+}
+
+
+#container {
+    border: 1px black solid;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    display: grid;
+    border-radius: 10px;
+    background: #a0aaad;
+}
+
+#container:hover {
+    cursor: crosshair;
+}
+
+#own {
+    text-align: center;
+}
+
+#own img {
+    height: 30px;
+    border-radius: 100%;
+}
