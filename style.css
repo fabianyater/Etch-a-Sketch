@@ -8,17 +8,25 @@
 
 html {
     background-image: url("fondo.png");
+    /*! background: linear-gradient(135deg, rgb(204, 145, 253), rgb(169, 220, 250)); *//*! un degradado bien nice */
+    /*! background-image: linear-gradient(to right, #44c2fc, #af44fc); */
     background-size: cover;
     font-weight: bold;
     font-family: Sofia;
 }
 
 body {
-    width: 600px;
-    margin: auto;
-    border: 2px black solid;
-    border-radius: 60px 60px 0 0;
-    background: #ac0102;
+}
+
+
+#containerup {
+  width: 600px;
+margin: 36px auto 13px auto;
+border: 2px
+black solid;
+border-radius: 60px 60px 0 0;
+background:
+#d20000;
 }
 
 #titulo {
@@ -33,7 +41,12 @@ body {
     /*! border: 1px black solid; */
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 100%;
+}
+
+.btnsdiv{
+    
+    padding: 0 20px 0 20px;
 }
 
 #btns {
@@ -47,7 +60,7 @@ body {
 
 .opbtn {
     width: 90px;
-    box-shadow: -3px 3px #c6b497;
+    box-shadow: 0 0 4px 1px #c6b497;
     border: 2px #c6b497 solid;
     border-radius: 100%;
     /*! padding: 5px 15px 5px 15px; */
@@ -95,13 +108,15 @@ body {
 
 
 #container {
-    border: 1px black solid;
-    width: 500px;
-    height: 500px;
+    /*! border: 1px black solid; */
+    width: 450px;
+    height: 450px;
     margin: auto;
     display: grid;
     border-radius: 10px;
-    background: #a0aaad;
+    background: black;
+    box-sizing: border-box;
+    grid-gap: 1px;
 }
 
 #container:hover {
