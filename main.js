@@ -94,7 +94,6 @@ function createGrid(n) {
 
 
 
-
 function hoverColor() {
     const divs = document.querySelectorAll('.grids');
     divs.forEach((div) => {
