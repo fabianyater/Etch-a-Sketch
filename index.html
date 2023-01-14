@@ -2,34 +2,35 @@
 <html>
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Etch-a-Sketch</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Etch-a-Sketch</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 
 <body>
-    <div id="containerup">
-        <div id="opbtnup">
-            <div class="btnsdiv"> <input type="button" value="Black" id="black" class="opbtnup"></div>
-            <div class="btnsdiv"> <input type="button" value="RGB" id="rgb" class="opbtnup"></div>
-            <div class="btnsdiv"> <input type="button" value="Erase" id="erase" class="opbtnup"></div>
-        </div>
-        <div id="container"></div>
-        <div id="btns">
-            <input type="button" value="Size" id="size" class="opbtn">
-            <div id="titulo">Etch-a-Sketch</div>
-            <input type="button" value="Clear" id="clear" class="opbtn">
-        </div>
-        <div id="own">
-            <a href="https://github.com/fabianyater" target="_blank">
-                <img src="data:image/png;base64,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"
-                    alt=""></a>
-        </div>
-    </div>
-    <script src="main.js"></script>
+  <div class="container">
+    <header class="header">
+      <button type="button" value="Black" id="black" class="btn">Black</button>
+      <button type="button" value="RGB" id="rgb" class="btn">RGB</button>
+      <button type="button" value="Erase" id="erase" class="btn">Erase</button>
+    </header>
+    <main id="grid"></main>
+    <footer class="footer">
+      <div class="btns">
+        <button type="button" id="size" class="opbtn">Size</button>
+        <h1 class="title">Etch-a-Sketch</h1>
+        <button type="button" id="clear" class="opbtn">Clear</button>
+      </div>
+      <div class="github">
+        <a href="https://github.com/fabianyater" target="_blank">
+          <img src="github-icon.png" alt=""></a>
+      </div>
+    </footer>
+  </div>
+  <script src="main.js"></script>
 </body>
 
 </html>
