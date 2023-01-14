@@ -4,7 +4,6 @@ let buttonRgb = document.getElementById("rgb");
 let buttonClear = document.getElementById("clear");
 let buttonErase = document.getElementById("erase");
 
-
 function generateRandomColor() {
     let letters = '0123456789ABCDEF';
     let color = '#';
@@ -13,8 +12,6 @@ function generateRandomColor() {
     }
     return color;
 }
-
-
 
 buttonSize.addEventListener("click", () => {
     while (true) {
@@ -28,71 +25,48 @@ buttonSize.addEventListener("click", () => {
     }
 });
 
-
-
-buttonBlack.addEventListener("click", () => {
-    const divs = document.querySelectorAll('.grids');
-    divs.forEach((div) => {
-        div.addEventListener("mouseover", () => {
-            div.style.backgroundColor = "black";
-        })
-    });
-});
-
-
-
-buttonRgb.addEventListener("click", () => {
-    const divs = document.querySelectorAll('.grids');
-    divs.forEach((div) => {
-        div.addEventListener("mouseover", () => {
-            div.style.backgroundColor = generateRandomColor();
-        })
-    });
-});
-
-
-
-buttonClear.addEventListener("click", () => {
-    const divs = document.querySelectorAll('.grids');
-    divs.forEach((div) => {
-        div.style.backgroundColor = "white";
-    });
-});
-
-buttonErase.addEventListener("click", ()=> {
+function paintGrid (color) {
     let divs = Array.from(document.querySelectorAll('.grids'));
     divs.forEach((div) => {
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = "white";
-            /*div.removeAttribute('style');*/
+            div.style.backgroundColor = color;
         })
     });
+}
+
+buttonBlack.addEventListener("click", () => {
+    paintGrid("black");
 });
 
+buttonRgb.addEventListener("click", () => {
+    paintGrid(generateRandomColor());
+});
 
-createGrid(16);
+buttonClear.addEventListener("click", () => {
+    paintGrid("white");
+});
+
+buttonErase.addEventListener("click", ()=> {
+    paintGrid("white");
+});
 
 function createGrid(n) {
-
-    const content = document.getElementById("container");
+    const content = document.getElementById("grid");
     while (content.firstChild) {
         content.firstChild.remove();
     }
 
-
-    container.style.gridTemplateColumns = `repeat(${n}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${n}, 1fr)`;
-
+    grid.style.gridTemplateColumns = `repeat(${n}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${n}, 1fr)`;
+    
     for (let i = 0; i < n * n; i++) {
         const div = document.createElement('div');
         div.style.backgroundColor = "white";
         div.classList.add('grids');
-        container.appendChild(div);
+        grid.appendChild(div);
     }
     hoverColor();
 }
-
-
 
 function hoverColor() {
     const divs = document.querySelectorAll('.grids');
@@ -102,3 +76,5 @@ function hoverColor() {
         });
     });
 }
+
+createGrid(16);
